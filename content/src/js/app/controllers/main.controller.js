@@ -93,10 +93,10 @@
 
 	$scope.model.game.topLightColors = ['red', 'yellow', 'green', 'blue'];
 
-	var payoutSound = new Audio('content/dist/sounds/payout.wav');
+	var payoutSound = new Audio('Jackpot/content/dist/sounds/payout.wav');
 	payoutSound.loop = true;
 
-	var reelsSound = new Audio('content/dist/sounds/reels.wav');
+	var reelsSound = new Audio('Jackpot/content/dist/sounds/reels.wav');
 
 	$scope.model.game.onRestartClick = function () {
 		payoutSound.pause();
@@ -153,7 +153,7 @@
 			$timeout(function () {
 				$scope.model.game.gameWon = true;
 
-				var wonSound = new Audio('content/dist/sounds/won.mp3');
+				var wonSound = new Audio('Jackpot/content/dist/sounds/won.mp3');
 				wonSound.play();
 				
 				payoutSound.play();
