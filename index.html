@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/">
+    <title>Jackpot Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="content/dist/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Luckiest Guy' rel='stylesheet'>
+</head>
+<body ng-app="myApp" ng-controller="mainCtrl">
+
+    <div class="background"></div>
+
+    <div class="game">
+
+        <div class="machine-wrap">
+            <div class="machine">
+
+                <div class="lights">
+
+                    <div class="light-1" ng-style="{'background-color': model.game.topLightColors[0], 'animation': (model.game.gameWon ? 'glow-box 0.3s ease-in-out infinite alternate' : '') }"></div>
+                    <div class="light-2" ng-style="{'background-color': model.game.topLightColors[1], 'animation': (model.game.gameWon ? 'glow-box 0.3s ease-in-out infinite alternate' : '') }"></div>
+                    <div class="light-3" ng-style="{'background-color': model.game.topLightColors[2], 'animation': (model.game.gameWon ? 'glow-box 0.3s ease-in-out infinite alternate' : '') }"></div>
+                    <div class="light-4" ng-style="{'background-color': model.game.topLightColors[3], 'animation': (model.game.gameWon ? 'glow-box 0.3s ease-in-out infinite alternate' : '') }"></div>
+
+                </div>
+
+                <div class="screen">
+
+                    <p class="glow" ng-if="model.game.gameWon">YOU WIN</p>
+
+                </div>
+
+
+
+                <div class="spinning-reels">
+                    <div class="perspective-on">
+                        <div id="rotate">
+
+                            <div id="ring{{ $index }}" style="animation: {{ring.animation}}" class="{{ring.class}}" ng-repeat="ring in model.game.rings">
+                                <div style="transform: {{ symbol.transform }}" class="symbol" ng-repeat="symbol in ring.symbols">
+                                    <p style="font-size: 45px" ng-bind="symbol.text"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coin-hider-top"></div>
+                <div class="tray">
+                    <div class="coin" ng-repeat="coinAnimation in model.game.coinAnimations" ng-show="model.game.gameWon && coinAnimation.animate" ng-style="{'animation': coinAnimation.animate ? 'drop 0.5s linear infinite' : ''}">$</div>
+                </div>
+                <div class="coin-hider-bottom"></div>
+
+            </div>
+        </div>
+
+        <div class="half-circle">
+        </div>
+
+        <div ng-class="{'do-animate-lever': model.game.startPending }" class="lever">
+            <div>
+                <button ng-class="{'do-animate-button': model.game.startPending }" class="button" ng-click="model.game.onRestartClick()"><p id="vert">SPIN</p></button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="content/src/js/app/main.js"></script>
+    <script src="content/src/js/app/controllers/main.controller.js"></script>
+</body>
