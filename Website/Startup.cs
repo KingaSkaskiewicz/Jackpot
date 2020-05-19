@@ -26,6 +26,7 @@ namespace Website
                 app.UseDeveloperExceptionPage();
             }
 
+            //
             //for git pages to work nice with .net debugging
             app.UsePathBase("/Jackpot");
             app.UseDefaultFiles();
