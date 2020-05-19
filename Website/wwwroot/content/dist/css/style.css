@@ -1,0 +1,310 @@
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background: radial-gradient(circle at 47% 53%, #FED373 30%, #F15245 50%, #D92E7F 70%, #9B36B7 90%, #515ECF); }
+
+.game {
+  text-align: center;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+.game > div {
+  float: right; }
+
+.machine-wrap {
+  width: 690px;
+  height: 840px;
+  position: relative;
+  display: inline-block;
+  margin: 70px auto;
+  border-radius: 350px 350px 20px 20px;
+  background: linear-gradient(to bottom, #fdb607, #9c0312);
+  box-shadow: 0 10px 8px -5px #000; }
+
+.machine {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin: 20px auto;
+  width: 650px;
+  height: 800px;
+  background-color: #e1051b;
+  border-radius: 350px 350px 20px 20px;
+  box-shadow: inset 0 0 20px #000000; }
+
+.lights {
+  margin-top: 20px; }
+
+.light, .light-1, .light-2, .light-3, .light-4 {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 5px 10px #000000; }
+  .light-1 {
+    margin: 120px 60px; }
+  .light-2 {
+    margin: 20px 190px; }
+  .light-3 {
+    margin: 20px 360px; }
+  .light-4 {
+    margin: 120px 480px; }
+
+.screen {
+  text-align: center;
+  height: 150px;
+  width: 300px;
+  border-radius: 500px 500px 10px 10px;
+  background-color: #163b63;
+  margin: 160px auto 0 auto;
+  box-shadow: inset 0 0 60px #000000; }
+
+.spinning-reels {
+  position: relative;
+  display: inline-block;
+  width: 420px;
+  height: 190px;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #fdb607, #9c0312);
+  margin-top: 40px;
+  box-shadow: 0 5px 10px #000000; }
+
+.perspective-on {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+  margin: 40px auto; }
+
+#rotate {
+  margin: 10px 10px;
+  transform-style: preserve-3d; }
+
+.ring {
+  margin: 15px;
+  height: 80px;
+  width: 90px;
+  float: left;
+  transform-style: preserve-3d; }
+
+.symbol {
+  position: absolute;
+  width: 130px;
+  height: 80px;
+  box-sizing: border-box;
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.9);
+  background: #fff;
+  border-radius: 15px/190px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.symbol p {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 80px;
+  margin: 0;
+  text-align: center; }
+
+.go {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 10px 30px;
+  font-size: 20px;
+  cursor: pointer; }
+
+@keyframes back-spin {
+  100% {
+    transform: rotateX(60deg); } }
+
+.spin-0 {
+  transform: rotateX(-3719deg); }
+
+@keyframes spin-0 {
+  0% {
+    transform: rotateX(60deg); }
+  100% {
+    transform: rotateX(-3719deg); } }
+
+.spin-1 {
+  transform: rotateX(-3779deg); }
+
+@keyframes spin-1 {
+  0% {
+    transform: rotateX(60deg); }
+  100% {
+    transform: rotateX(-3779deg); } }
+
+.spin-2 {
+  transform: rotateX(-3839deg); }
+
+@keyframes spin-2 {
+  0% {
+    transform: rotateX(60deg); }
+  100% {
+    transform: rotateX(-3839deg); } }
+
+.spin-3 {
+  transform: rotateX(-3899deg); }
+
+@keyframes spin-3 {
+  0% {
+    transform: rotateX(60deg); }
+  100% {
+    transform: rotateX(-3899deg); } }
+
+.spin-4 {
+  transform: rotateX(-3959deg); }
+
+@keyframes spin-4 {
+  0% {
+    transform: rotateX(60deg); }
+  100% {
+    transform: rotateX(-3959deg); } }
+
+.spin-5 {
+  transform: rotateX(-4019deg); }
+
+@keyframes spin-5 {
+  0% {
+    transform: rotateX(60deg); }
+  100% {
+    transform: rotateX(-4019deg); } }
+
+.glow {
+  font-family: "Luckiest Guy";
+  font-size: 50px;
+  color: whitesmoke;
+  animation: glow 0.3s ease-in-out infinite alternate;
+  position: absolute;
+  margin: 50px; }
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 5px #f5f593, 0 0 10px #f5f593, 0 0 15px #f5f593, 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #fff, 0 0 35px #fff; }
+  to {
+    text-shadow: none; } }
+
+@-webkit-keyframes glow-box {
+  from {
+    box-shadow: 0 0 5px #f5f593, 0 0 10px #f5f593, 0 0 15px #f5f593, 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #fff, 0 0 35px #fff; }
+  to {
+    box-shadow: none; } }
+
+.tray {
+  height: 100px;
+  width: 500px;
+  border-radius: 10px;
+  border: 8px solid #031307;
+  background: #008000;
+  margin: 80px auto 10px auto;
+  box-shadow: inset -1px -20px 40px 0px #000000; }
+
+.coin {
+  margin: 0px 15px;
+  background-color: yellow;
+  border: 5px solid orange;
+  color: orange;
+  font-family: "Luckiest Guy";
+  font-size: 20px;
+  position: relative;
+  display: inline-block; }
+
+@keyframes drop {
+  0% {
+    transform: translateY(-20px);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; }
+  90% {
+    transform: translateY(74px);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; }
+  100% {
+    transform: translateY(74px);
+    height: 20px;
+    width: 40px;
+    border-radius: 50%; } }
+
+.coin-hider, .coin-hider-top, .coin-hider-bottom {
+  background-color: #025a16;
+  position: absolute;
+  height: 30px;
+  width: 500px;
+  z-index: 3; }
+  .coin-hider-top {
+    border-radius: 5px 5px 0px 0px;
+    margin-top: 65px;
+    margin-left: 65px;
+    box-shadow: inset 0px -10px 20px 0px #000000; }
+  .coin-hider-bottom {
+    border-radius: 0px 0px 5px 5px;
+    margin-top: -18px;
+    margin-left: 65px;
+    box-shadow: inset 0px 10px 20px 0px #000000; }
+
+.half-circle {
+  height: 180px;
+  width: 90px;
+  border-radius: 0 90px 90px 0;
+  background: #163b63;
+  position: relative;
+  margin-top: 710px;
+  z-index: 1;
+  box-shadow: inset 2px -7px 20px 0px #000000; }
+
+.button {
+  height: 100px;
+  width: 250px;
+  position: absolute;
+  border: none;
+  border-radius: 70px;
+  padding: 0 10px;
+  transform: rotate(90deg);
+  margin-top: -100px;
+  margin-left: -125px;
+  transform-origin: 50% 50%;
+  background-color: #ef041b;
+  box-shadow: inset 4px -4px 20px 5px #8e0b18; }
+
+.button:focus, .button:active {
+  outline: none !important; }
+
+#vert {
+  color: #ffd400;
+  transform: rotate(270deg);
+  font-size: 40px;
+  font-family: "Luckiest Guy";
+  position: relative;
+  margin: -50px;
+  line-height: initial; }
+
+.lever {
+  margin-top: 450px;
+  margin-left: 730px;
+  width: 50px;
+  height: 350px;
+  background: #ffc107;
+  position: absolute;
+  z-index: 0;
+  transform-origin: 50% 100%;
+  box-shadow: inset 2px -7px 20px 0px #dc1f01; }
+
+.do-animate-lever {
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-timing-function: linear; }
+
+@keyframes rotate {
+  0%, 100% {
+    transform: rotate(0deg); }
+  25%, 75% {
+    transform: rotate(44deg); }
+  50% {
+    transform: rotate(90deg); } }
