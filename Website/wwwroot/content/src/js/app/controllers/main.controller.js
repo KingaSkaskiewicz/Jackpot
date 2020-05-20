@@ -93,7 +93,7 @@
 
 	$scope.model.game.topLightColors = ['red', 'yellow', 'green', 'blue'];
 
-	//
+
 	var payoutSound = new Audio('Jackpot/content/dist/sounds/payout.wav');
 	payoutSound.loop = true;
 
