@@ -1,11 +1,13 @@
 .background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 0;
-  background: radial-gradient(circle at 47% 53%, #FED373 30%, #F15245 50%, #D92E7F 70%, #9B36B7 90%, #515ECF); }
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 0;
+    background: radial-gradient(circle at 47% 53%, #FED373 30%, #F15245 50%, #D92E7F 70%, #9B36B7 90%, #515ECF);
+}
 
 .game {
+  height: 100vh;
   text-align: center;
   display: flex;
   position: absolute;
